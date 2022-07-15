@@ -1,13 +1,37 @@
 
 import './App.css';
-import { AppRegister } from './pages/AppRegister';
+import { CssBaseline } from "@material-ui/core";
+import AppPage from "./pages/AppPage";
+// import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Form  from "../src/component/Form/Form";
+import Dashboard from "./pages/Dashboard";
+import history from "./history";
+
 
 function App() {
   return (
-    <div className="App">
-      <p>dfhf</p>
-    <AppRegister/>
+    // <Router>
+    //   <div className="App">
+    //     <Switch>
+    //       <Route exact path="/" component={AppPage} />
+    //       <Route exact path="/dashboard" component={Dashboard} />
+    //       {/* <Route path="/:others" component={NoPageFound} /> */}
+
+    //     </Switch>
+    //   </div>
+    // </Router>
+    <>  <div style={{
+      width: "500px", height: "700px", backgroundColor: "blue",
+border: '5px solid #FFFF00',
+      textAlign: 'center'
+    }} >
+      <Form />
+
+
     </div>
+
+    </>
   );
 }
 

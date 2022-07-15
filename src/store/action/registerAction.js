@@ -14,16 +14,39 @@ const API = axios.create({
 //     },
 // });
 
-export const registerAction = (appData) => async (dispatch) => {
+export const registerAction = async(appData)=> {
     try {
-        const data = await API.post("/register", appData);
-        dispatch({ payload: { ...data} });
-        console.log(data);
+        console.log(appData);
+
+        const data = await API.post("/register-cron", appData);
         return data;
     } catch (e) {
         console.log(e);
-        toast(e.response.data.errors[0].msg)
-        return e.response.message;
+        toast(e)
+        return e
     }
 };
 
+export const getAppData = async () => {
+    try {
+        const data = await API.get("/fetch-app-names");
+        return data;
+    }
+    catch (e) {
+        console.log(e);
+        return e;
+    }
+}
+ 
+export const getCronAppData = async () => {
+    try {
+        console.log('getCronAppData');
+        const data = await API.get('/get-registered-cron-app');
+        console.log("data",data)
+        return data;
+    }
+    catch (e) {
+        console.log(e);
+        return e;
+    }
+}
