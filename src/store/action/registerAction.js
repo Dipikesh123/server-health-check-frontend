@@ -29,7 +29,7 @@ export const registerAction = async(appData)=> {
 
 export const getAppData = async () => {
     try {
-        const data = await API.get("/fetch-app-names");
+        const data = await API.get("/fetch-app-names",);
         return data;
     }
     catch (e) {

@@ -1,4 +1,4 @@
-export const baseURL = "http://localhost:8000/";
+export const baseURL = "https://cronbackend.herokuapp.com";
 
 // export const getToken = () => {
 //     const token = JSON.parse(localStorage.getItem("profile"))?.token;

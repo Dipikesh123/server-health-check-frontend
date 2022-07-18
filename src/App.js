@@ -21,17 +21,12 @@ function App() {
     //     </Switch>
     //   </div>
     // </Router>
-    <>  <div style={{
-      width: "500px", height: "700px", backgroundColor: "blue",
-border: '5px solid #FFFF00',
-      textAlign: 'center'
-    }} >
+ 
       <Form />
 
 
-    </div>
+ 
 
-    </>
   );
 }
 
